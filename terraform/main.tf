@@ -25,6 +25,6 @@ resource "aws_instance" "test_instance" {
  ami           = "ami-01fccab91b456acc2"
  instance_type = "t2.nano"
  tags = {
-   Name = "test_instance"
+   Name = "new_instance"
  }
 }
