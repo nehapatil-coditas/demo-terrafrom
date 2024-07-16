@@ -1,3 +1,4 @@
+# this is Terraform apply workflow
 name: "Terraform Infrastructure Change Management Pipeline with GitHub Actions"
 
 on: 
@@ -25,7 +26,6 @@ jobs:
     defaults:
       run:
         shell: bash
-        # We keep Terraform files in the terraform directory.
         working-directory: ./terraform
 
     steps:
