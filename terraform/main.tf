@@ -1,3 +1,9 @@
+# This is a demo project for github actions and terraform integration.
+
+# Added two workflows
+# 1. Terraform Apply
+# 2. Terraform Destroy
+
 terraform {
  required_providers {
    aws = {
@@ -29,6 +35,3 @@ resource "aws_instance" "test_instance" {
  }
 }
 
-# Added two workflows
-# 1. Terraform Apply
-# 2. Terraform Destroy
