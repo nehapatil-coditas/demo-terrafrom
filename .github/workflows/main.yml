@@ -1,4 +1,4 @@
-# this is Terraform apply workflow
+# This is Terraform Workflow
 name: "Terraform Infrastructure Change Management Pipeline with GitHub Actions"
 
 on: 
@@ -39,7 +39,7 @@ jobs:
       
       - name: Terraform init
         id: init
-        run: terraform init -backend-config="bucket=$BUCKET_TF_STATE"
+        run: terraform init 
 
       - name: Terraform format
         id: fmt
@@ -52,7 +52,7 @@ jobs:
       - name: Terraform plan
         id: plan
         if: github.event_name == 'pull_request'
-        run: terraform plan -no-color -input=false
+        run: terraform plan 
         continue-on-error: true
       
       - name: Terraform Plan Status
@@ -61,4 +61,4 @@ jobs:
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: terraform apply -auto-approve -input=false
+        run: terraform apply -auto-approve
