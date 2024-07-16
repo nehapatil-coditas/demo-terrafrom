@@ -28,3 +28,7 @@ resource "aws_instance" "test_instance" {
    Name = "new_instance"
  }
 }
+
+# Added two workflows
+# 1. Terraform Apply
+# 2. Terraform Destroy
